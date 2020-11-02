@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // Use JUnit Jupiter API for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+    testImplementation 'org.assertj:assertj-core:3.18.0'
+    testImplementation 'com.approvaltests:approvaltests-tests:9.3.0'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    implementation 'com.google.guava:guava:29.0-jre'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
